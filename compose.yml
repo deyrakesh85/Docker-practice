@@ -4,10 +4,8 @@ services:
   jenkins:
     image: "jenkins:latest"
 	ports:
-	  - "8080:8090"
+	  - "8090:8080"
   nexus:
     image: "sonatype/nexus"
 	ports:
 	  - "8081:8091"
-	
-	
