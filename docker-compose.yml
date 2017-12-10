@@ -19,9 +19,9 @@ services:
     depends_on:
       - "db"
     environment:
-      - SONARQUBE_JDBC_USERNAME = sonar
-      - SONARQUBE_JDBC_PASSWORD = sonar
-      - SONARQUBE_JDBC_URL = jdbc:mysql://sonar-mysql:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true
+      SONARQUBE_JDBC_USERNAME: sonar
+      SONARQUBE_JDBC_PASSWORD:sonar
+      SONARQUBE_JDBC_URL: jdbc:mysql://sonar-mysql:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true
    
   db:
     container_name: sonar-mysql
@@ -29,7 +29,7 @@ services:
     ports:
       - "3306:3306"
     environment:
-      - MYSQL_ROOT_PASSWORD = sonar
-      - MYSQL_DATABASE = sonar
-      - MYSQL_USER = sonar
-      - MYSQL_PASSWORD = sonar
+      MYSQL_ROOT_PASSWORD: sonar
+      MYSQL_DATABASE: sonar
+      MYSQL_USER: sonar
+      MYSQL_PASSWORD: sonar
