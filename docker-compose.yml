@@ -16,7 +16,7 @@ services:
     image: "sonarqube:latest"
     ports:
       - "9000:9000"
-    depends-on:
+    depends_on:
       - "db"
     environment:
       - SONARQUBE_JDBC_USERNAME = sonar
