@@ -2,17 +2,17 @@
 version: '3'
 services:
   jenkins:
-    name: jenkins
+    container_name: jenkins
     image: "jenkins:latest"
     ports:
       - "8090:8080"
   nexus:
-    name: nexus
+    container_name: nexus
     image: "sonatype/nexus:latest"
     ports:
       - "8091:8081"
   sonar:
-    name: sonar
+    container_name: sonar
     image: "sonarqube:latest"
     ports:
       - "9000:9000"
@@ -22,7 +22,7 @@ services:
       - SONARQUBE_JDBC_URL = jdbc:mysql://sonar-mysql:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true
    
   db:
-    name: sonar-mysql
+    container_name: sonar-mysql
     image: "mysql:latest"
     ports:
       - "3306:3306"
