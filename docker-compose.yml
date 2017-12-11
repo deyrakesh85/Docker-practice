@@ -6,6 +6,8 @@ services:
     image: "jenkins:latest"
     ports:
       - "8090:8080"
+    environment:
+      PREFIX: "/jenkins"
 
   nexus:
     container_name: nexus
@@ -23,7 +25,7 @@ services:
       SONARQUBE_JDBC_USERNAME: "sonar"
       SONARQUBE_JDBC_PASSWORD: "sonar"
       SONARQUBE_JDBC_URL: "jdbc:mysql://sonar-mysql:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true"
-      SONAR.WEB.CONTEXT: "/sonarqube"
+      SONAR.WEB.CONTEXT: "/sonar"
    
   db:
     container_name: sonar-mysql
