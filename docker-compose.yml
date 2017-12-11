@@ -6,7 +6,7 @@ services:
     image: "jenkins:latest"
     ports:
       - "8090:8080"
-	
+
   nexus:
     container_name: nexus
     image: "sonatype/nexus:latest"
