@@ -17,6 +17,7 @@ services:
   sonar:
     container_name: sonar
     image: "sonarqube:latest"
+    command: "-Dsonar.web.context=/sonar"
     ports:
       - "9000:9000"
     depends_on:
@@ -25,7 +26,6 @@ services:
       SONARQUBE_JDBC_USERNAME: "sonar"
       SONARQUBE_JDBC_PASSWORD: "sonar"
       SONARQUBE_JDBC_URL: "jdbc:mysql://sonar-mysql:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true"
-      SONAR_WEB_CONTEXT: "/sonar"
    
   db:
     container_name: sonar-mysql
