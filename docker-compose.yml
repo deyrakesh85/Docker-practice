@@ -25,7 +25,7 @@ services:
       SONARQUBE_JDBC_USERNAME: "sonar"
       SONARQUBE_JDBC_PASSWORD: "sonar"
       SONARQUBE_JDBC_URL: "jdbc:mysql://sonar-mysql:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true"
-      SONAR.WEB.CONTEXT: "/sonar"
+      SONAR_WEB_CONTEXT: "/sonar"
    
   db:
     container_name: sonar-mysql
