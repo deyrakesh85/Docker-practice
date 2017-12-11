@@ -49,3 +49,4 @@ services:
       - "sonar"
     volumes:
       - ./default.conf:/etc/nginx/conf.d/default.conf
+      - ./html:/usr/share/nginx/html
