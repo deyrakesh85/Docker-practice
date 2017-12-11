@@ -39,5 +39,6 @@ services:
     image: "nginx:latest"
     ports:
       - "80:80"
+    depends_on: "jenkins,nexus,sonar"
     volumes:
       - ./default.conf:/etc/nginx/conf.d/default.conf
