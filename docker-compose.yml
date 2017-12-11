@@ -33,7 +33,7 @@ services:
       MYSQL_DATABASE: "sonar"
       MYSQL_USER: "sonar"
       MYSQL_PASSWORD: "sonar"
-	  
+
   nginx:
     container_name: nginx
     images: "nginx:latest"
