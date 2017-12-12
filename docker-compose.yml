@@ -41,7 +41,7 @@ services:
   gitlab:
     container_name: gitlab
     image: "gitlab/gitlab-ce:latest"
-    environemnt:
+    environment:
       GITLAB_OMNIBUS_CONFIG: "external_url 'http://localhost:8822/gitlab'"
 
   nginx:
