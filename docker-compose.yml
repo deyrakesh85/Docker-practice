@@ -47,6 +47,8 @@ services:
   gerrit:
     container_name: gitblit
     image: "jacekkow/gitblit:latest"
+    ports:
+      - "8070:8080"
 
   nginx:
     container_name: nginx
