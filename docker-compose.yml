@@ -3,11 +3,12 @@ version: '3'
 services:
   jenkins:
     container_name: jenkins
-    image: "jenkins:latest"
+    image: "deyrakesh85/jenkins:0.1"
+#    image: "jenkins:latest"
     ports:
       - "8090:8080"
-    environment:
-      JENKINS_OPTS: "--prefix=/jenkins"
+#    environment:
+#      JENKINS_OPTS: "--prefix=/jenkins"
 
   nexus:
     container_name: nexus
