@@ -1,16 +1,65 @@
 <html>
 <head>
 <title>DevOps World!!</title>
+<style> 
+.flex-container {
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.flex-container > * {
+    padding: 15px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.article {
+    text-align: left;
+	background: #A6A3F2;
+}
+
+header {background: #2F2C82;color:white;}
+footer {background: #aaa;color:white;}
+.nav {background:#eee;}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+.nav ul a {
+    text-decoration: none;
+}
+
+@media all and (min-width: 768px) {
+    .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+    .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+    footer {-webkit-order:3;order:3;}
+}
+</style>
 </head>
 
 <body>
-<center><h1>Welcome to DevOps World!!</h1></center>
-<h2>
-<a href="/jenkins"><img src="images/jenkins.png" alt="jenkins" style="width:200px;height:100px; display: block; margin-left: auto; margin-right: auto; border:2px solid #000000" /></a> <br>
-<a href="/nexus"><img src="images/nexus.png" alt="nexus" style="width:200px;height:100px; display: block; margin-left: auto; margin-right: auto; border:2px solid #000000" /></a> <br>
-<a href="/sonar"><img src="images/sonar.png" alt="sonar" style="width:200px;height:100px; display: block; margin-left: auto; margin-right: auto; border:2px solid #000000" /></a> <br>
-<a href="/gitlab"><img src="images/gitlab.jpg" alt="gitlab" style="width:200px;height:100px; display: block; margin-left: auto; margin-right: auto; border:2px solid #000000" /></a>
-</h2>
 
+<div class="flex-container">
+<header>
+  <h1>Welcome to DevOps World!!</h1>
+</header>
+
+<article class="article">
+<h2>
+<div style="width:220px;height:200px; float:left"><a href="/jenkins"><img src="images/jenkins.jpg" alt="jenkins" style="border-radius: 50%; width:200px;height:100px; display: block; float: left; border:2px solid #000000" /></a></div>
+
+<div style="width:220px;height:200px; float:left"><a href="/nexus"><img src="images/nexus1.png" alt="nexus" style="border-radius: 50%; width:200px;height:100px; display: block; float: left; border:2px solid #000000" /></a></div>
+
+<div style="width:220px;height:200px; float:left"><a href="/sonar"><img src="images/sonar1.png" alt="sonar" style="border-radius: 50%; width:200px;height:100px; display: block; float:left; border:2px solid #000000" /></a> </div>
+
+<div style="width:220px;height:200px; float:left"><a href="/gitlab"><img src="images/gitlab1.png" alt="gitlab" style="border-radius: 50%; width:200px;height:100px; display: block; float:left; border:2px solid #000000" /></a></div>
+</h2>
+</article>
+<footer>Copyright &copy; Rakesh Dey</footer>
+</div>
 </body>
 </html>
