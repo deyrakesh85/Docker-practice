@@ -24,7 +24,7 @@ else
 		docker_compose_installed="yes"
 fi
 
-if [ $docker_installed == "no" || $docker_compose_installed == "no" ]; then
+if [ "$docker_installed" == "no" || "$docker_compose_installed" == "no" ]; then
 
 	echo "Exiting as pre-requisites are not found."
 	exit 1
